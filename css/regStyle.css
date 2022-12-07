@@ -2,11 +2,13 @@ html{
 	scroll-behavior: smooth;
 }
 
+.navbar-toggler {
+  color: white;
+}
+
 .atImage img{
   border-radius: 50%;
   display: none;
-  /* size: 450px; */
-  /* margin-left: 0; */
   padding-bottom: 30px;
 }
 
@@ -69,16 +71,8 @@ nav a:hover {
     text-decoration: underline;     
 }
 
- /* .navbar-light{
-  padding-right: 10px;
-}  */
-/* 
-.navbar-brand {
-  padding-left: 50px;
-} */
 
 li.active {
-	/* text-decoration: underline;      */
     font-weight: bold;
 }  
 
@@ -105,7 +99,7 @@ div.row {
 }
  
 .row {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     padding: 0 4px;
 }
@@ -139,8 +133,6 @@ div.row {
 }
 
 #projects {
-  /* padding-top: 100px;
-  padding-bottom: 80px; */
   justify-content: center;
   align-items: center;
   color: white;
@@ -154,7 +146,6 @@ div.row {
   padding-top: 100px;
   padding-bottom: 100px;
   width: 430px;
-  /* padding: 25px; */
   position: relative;
   overflow: hidden;
   border-radius: 10px;
@@ -238,6 +229,7 @@ div.footer {
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
     z-index: 1;
+    font-size: 15px;
 }
 
 
@@ -275,30 +267,10 @@ div.footer {
   
   
 @media all and (min-width: 800px){
-/*   
-	nav {
-	  align-self: center;
-    margin: 8%;
+
+  .row {
+    display: flex;
   }
-  
-  
-	.container {
-	  grid-template-columns: 50px auto 500px auto 50px;
-	  display: grid;
-	}
-  
-	.about, .method-image, .clients, .contact-image{
-	  grid-column: 3 / span 2;
-	}
-  
-	.method, .clients-image, .contact, .about-image{
-	  grid-column: 2 / span 2;
-	}
-  
-	.text-block  {
-	overflow: auto;
-	max-height: 250px;
-  }   */
 
 
   body{
@@ -311,18 +283,18 @@ div.footer {
     margin: 0;
   }
 
-    /* change no more grid column 3 bio*/
 
 
 .nav-link {
-    /* change */
   font-size: 20px;
+}
+
+.nav-item.active  {
+  text-decoration: underline;
 }
   
 
   #projects {
-    /* padding-top: 100px;
-    padding-bottom: 80px; */
     justify-content: center;
     align-items: center;
     color: white;
@@ -336,7 +308,6 @@ div.footer {
     padding-top: 100px;
     padding-bottom: 100px;
     width: 800px;
-    /* padding: 25px; */
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -364,18 +335,9 @@ div.footer {
       margin-left: 15px;
       margin-right: 15px;
   }
-  
-  
-  #projects .title a {
-      color: #111;
-  }
-    
-  #projects .title a:hover{
-      color: var(--primary-medium);
-  }
+
     
   #projects p {
-      /* change */
       font-size: 18px;
       line-height: 28px;
       margin-bottom: 0;
@@ -384,7 +346,6 @@ div.footer {
   }
 
   .icons {
-      /* change */
     margin-left: 15px;
     margin-right: 15px;
   }
@@ -395,9 +356,7 @@ div.footer {
 
 
 .form {
-  /* change */
   margin-left: 270;
-  /* change */
   width: 450px;
   padding: 25px;
   position: relative;
@@ -424,6 +383,20 @@ div.d-block img {
   display: hidden;
 }
   
+
+.carousel-inner {
+  display: none;
+}
+
+.carousel-control-prev {
+  display: none
+}
+
+.carousel-control-next {
+  display: none;
+}
+
+
 } 
   
 @media screen and (prefers-reduced-motion: reduce){
@@ -441,39 +414,17 @@ div.d-block img {
 	}
 }
   
-  
-  
+   
   
 @media all and (min-width: 1400px){
-/*   
-	nav {
-	  align-self: center;
-    margin: 8%;
-  }
-  
-  
-	.container {
-	  grid-template-columns: 50px auto 500px auto 50px;
-	  display: grid;
-	}
-  
-	.about, .method-image, .clients, .contact-image{
-	  grid-column: 3 / span 2;
-	}
-  
-	.method, .clients-image, .contact, .about-image{
-	  grid-column: 2 / span 2;
-	}
-  
-	.text-block  {
-	overflow: auto;
-	max-height: 250px;
-  }   */
 
   .column img {
     display: none;
   }
 
+  .row {
+    display: flex;
+  }
 
   body{
     color: white;
@@ -501,8 +452,6 @@ div.d-block img {
 
 
   #projects {
-    /* padding-top: 100px;
-    padding-bottom: 80px; */
     justify-content: center;
     align-items: center;
     color: white;
@@ -516,11 +465,9 @@ div.d-block img {
     padding-top: 100px;
     padding-bottom: 100px;
     width: 800px;
-    /* padding: 25px; */
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    /* change */
     margin-left: -280px;
     background: var(--white);
     box-shadow: 0 15px 29px 0 rgba(68, 88, 144, 0.1);
@@ -544,15 +491,7 @@ div.d-block img {
       margin-left: 15px;
       margin-right: 15px;
   }
-  
-  
-  #projects .title a {
-      color: #111;
-  }
-    
-  #projects .title a:hover{
-      color: var(--primary-medium);
-  }
+
     
   #projects p {
       font-size: 15;
@@ -603,7 +542,15 @@ div.d-block img {
     padding-bottom: 50px;
   }
 
-  .carousel img {
+  .carousel-inner {
+    display: none;
+  }
+
+  .carousel-control-prev {
+    display: none
+  }
+
+  .carousel-control-next {
     display: none;
   }
 } 
